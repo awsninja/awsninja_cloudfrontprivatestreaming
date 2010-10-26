@@ -62,15 +62,15 @@
 video=encodeURIComponent('$urlcloud');
 
 var flashvars = {
-	image: '/vid2.png'
+	image: 'vid2.png'
 };
 
-var so1 = new SWFObject('/js/player.swf', 'mpl', '800', '600', '9');
+var so1 = new SWFObject('./js/player.swf', 'mpl', '800', '600', '9');
 so1.addParam('allowfullscreen','true');
 so1.addVariable('streamer','rtmpe://{$distributionDomain}/cfx/st');
 so1.addVariable('file', video);
 so1.addVariable("autostart", "false");
-so1.addVariable('image', '/vid2.png');
+so1.addVariable('image', 'vid2.png');
 so1.write('flv{$item}');
 </script> 
 
