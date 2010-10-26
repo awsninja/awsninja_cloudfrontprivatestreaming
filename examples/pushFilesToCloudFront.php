@@ -63,7 +63,7 @@ while(false !== ($file = readdir($viddir)))
 				'permission'=>AmazonS3::GRANT_FULL_CONTROL
 			),
 			array(
-				'id'=>NINJA_STREAMING_CANNONICALID,
+				'id'=>NINJA_STREAMING_CANONICALID,
 				'permission'=>AmazonS3::GRANT_READ
 			)
 		);

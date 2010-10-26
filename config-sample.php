@@ -8,7 +8,7 @@
 
 define('NINJA_STREAMING_BUCKET', 'texxxxxxxxxxie');
 define('NINJA_STREAMING_OAIID', 'E8xxxxxxxx55');
-define('NINJA_STREAMING_CANNONICALID', '45xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx98');
+define('NINJA_STREAMING_CANONICALID', '45xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx98');
 define('NINJA_STREAMING_DOMAIN_NAME', 's1xxxxxxxxx72.cloudfront.net');
 
 ?>

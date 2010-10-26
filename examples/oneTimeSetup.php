@@ -118,7 +118,7 @@ echo("Add these lines to config.php:\n\n");
 echo <<<EOF
 define('NINJA_STREAMING_BUCKET', '{$bucket}');
 define('NINJA_STREAMING_OAIID', '{$oaiId}');
-define('NINJA_STREAMING_CANNONICALID', '{$oaiCannId}');
+define('NINJA_STREAMING_CANONICALID', '{$oaiCannId}');
 define('NINJA_STREAMING_DOMAIN_NAME', '{$domainName}');
 
 
