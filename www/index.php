@@ -28,7 +28,7 @@
 		{
 			if($status = 'Deployed' && $enabled)
 			{
-				echo("Congratuations!  You distribution is now deployed.  You should remove the Distrubtion State Check found at lines ~21-45 of index.php.");
+				echo("Congratulations!  You distribution is now deployed.  You should remove the Distribution State Check found at lines ~21-45 of index.php.");
 			}
 			else
 			{

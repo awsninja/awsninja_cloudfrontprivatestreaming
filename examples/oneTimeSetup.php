@@ -43,7 +43,7 @@ putenv('HOME=' . NINJA_BASEPATH . 'awsninja_cloudfrontprivatestreaming/' );//env
 require_once NINJA_BASEPATH . 'awsninja_cloudfrontprivatestreaming/sdk/sdk.class.php';
 require_once NINJA_BASEPATH . 'awsninja_cloudfrontprivatestreaming/ninja.cloudfront.class.php';  //Get the customized Ninja version of the CloudFront service.
 
-//Instanciate the services
+//Instantiate the services
 $cfs = new AmazonCloudFrontNinja();
 $s3 = new AmazonS3();
 
@@ -78,7 +78,7 @@ sleep(1);
 echo("Done.\n");
 echo("Now creating an Origin Access Identity. . .\n");
 
-//You need a unqiue caller reference. We'll create one.
+//You need a unique caller reference. We'll create one.
 $oaiCallerRef = 'ninja-' . date('Y-m-d H:i:s', $timeStamp);
 $cor = $cfs->create_oai("ninja-{$oaiCallerRef}");
 if (!$cor->isOK()) //make sure the command completed successful
@@ -92,7 +92,7 @@ if (!$cor->isOK()) //make sure the command completed successful
 sleep(1);
 
 $oaiId = (string)$cor->body->Id;  //capture the Origin Access Identity id
-$oaiCannId = (string)$cor->body->S3CanonicalUserId;  //capture the Origin Access Identity Cannonical Id
+$oaiCannId = (string)$cor->body->S3CanonicalUserId;  //capture the Origin Access Identity Canonical Id
 echo("OAI Created.\n");
 sleep(1);
 echo("Now we're creating a Streaming CloudFront Distribution for the bucket and OID we just created . . . \n\n");

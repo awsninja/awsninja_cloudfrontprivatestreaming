@@ -56,8 +56,8 @@ $buckets = array();
 //Loop through the results
 foreach($dists->body->StreamingDistributionSummary as $dist)
 {
-	//You can only delete distibutions that are are disabled.  Unfortunatly, the process of
-	//disabling a distibution and then deleting it has many steps and is time consuming.
+	//You can only delete distributions that are are disabled.  Unfortunately, the process of
+	//disabling a distribution and then deleting it has many steps and is time consuming.
 	//Here, the entire process is automated and documented.  Reading the comments and code 
 	//below may give you a better understanding of the CloudFront Streaming architecture.
 
@@ -90,7 +90,7 @@ foreach($dists->body->StreamingDistributionSummary as $dist)
 	$res = $cfs->set_distribution_config($distributionId,  $newConfigXml , $etag, array('Streaming'=>true));
 
 	//Now we're going to poll the Distribution until it tells us it is disabled, just to make sure it worked.
-	$enabled = true; //Initialze $enabled as true
+	$enabled = true; //Initialize $enabled as true
 	while($enabled)
 	{
 		echo("Check if disabled\n");
@@ -143,7 +143,7 @@ foreach($dists->body->StreamingDistributionSummary as $dist)
 $oais = $cfs->get_oai_list();
 $oaict = count($oais);
 
-echo("Removing $oaict Orgin Access Identities\n");
+echo("Removing $oaict Origin Access Identities\n");
 
 for($i=0; $i<$oaict; $i++)
 {
@@ -154,7 +154,7 @@ for($i=0; $i<$oaict; $i++)
 	echo("OAI $oaiId removed.\n");
 }
 
-echo("All OAIs are removed.  Below are the buckets associated with the disributions that were just removed:");
+echo("All OAIs are removed.  Below are the buckets associated with the distributions that were just removed:");
 
 $bucCt = count($buckets);
 for($i=0;$i<$bucCt;$i++)
